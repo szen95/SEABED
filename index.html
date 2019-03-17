@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<!--
+ ##########################################################################
+ Patrick.Brockmann@lsce.ipsl.fr
+ ##########################################################################
+-->
+
+<script src="https://d3js.org/d3.v3.js"></script>
+<script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://unpkg.com/d3-require@0.4.5/build/d3-require.js"></script>
+<script src="https://unpkg.com/d3-let@0.3.2/build/d3-let.js"></script>
+<script src="https://unpkg.com/d3-view@0.9.3/build/d3-view.js"></script>
+
+<script src="heatmap.js"></script>
+<script type="text/javascript" src="labels.json"></script>
+<link rel="stylesheet" href="heatmap.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+
+<head>
+
+<script>
+$(document).ready(function() {
+	heatmap_display("metrics_ocmip5.json", "#heatmap", "Spectral");
+});
+
+</script>
+
+</head>
+
+<body>
+
+<!-- Order:
+<select id="order">
+  <option value="null" selected> ----- </option>
+  <option value="sortinit_col_row">Initial order on columns and rows</option>
+  <option value="sortinit_row">Initial order on rows</option>
+  <option value="sortinit_col">Initial order on columns</option>
+</select>
+
+Palette:
+<select id="palette">
+  <option value="RdYlGn">RdYlGn</option>
+  <option value="Spectral" selected>Spectral</option>
+  <option value="RdYlBu">RdYlBu</option>
+  <option value="RdGy">RdGy</option>
+  <option value="RdBu">RdBu</option>
+  <option value="PiYG">PiYG</option>
+  <option value="PRGn">PRGn</option>
+  <option value="BrBG">BrBG</option>
+  <option value="PuOr">PuOr</option>
+</select> -->
+
+<div id="heatmap"></div>
+
+<!-- <div id="modal01" class="modal">Blabla</div> -->
+
+<!-- <div id="box" class="modal-box"></div> -->
+<img id="box" class="modal-box"/>
+<!-- <img id="modal01" class="modal"/> -->
+
+
+</body>
+</html>

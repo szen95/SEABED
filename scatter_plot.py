@@ -43,7 +43,7 @@ resistant = 'resistant'
 drug1_target = df5['TARGET'].loc[92]
 drug2_target = df5['TARGET'].loc[88]
 
-# biomarker file after significance testing
+# biomarker file after significance testing (Table S3)
 biomarker_file = drug1 + '_' + drug2 + '.csv'
 names = ["Subpop.", "Number of cells in Subpop.", "Feature", "Percent in Subpop.", "Number of cells with Feature", "P-value", "Adjusted P-value"]
 df6 = pd.read_csv(biomarker_file, error_bad_lines=False)

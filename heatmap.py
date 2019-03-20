@@ -8,18 +8,15 @@ import matplotlib.colors as colors
 import pandas as pd
 
 # import list of drug pairs and matrix to visualize after classification of pair-wise drug responses
-drug_pairs = "Fig2_MAPK_PI3K_drug_pairs.csv"
 matrix = "MAPK_AKT_drug-drug_matrix.csv"
 
-df1 = pd.read_csv(drug_pairs, index_col = 0, error_bad_lines=False)
-df2 = pd.read_csv(matrix, index_col = 0, error_bad_lines=False)
+df1 = pd.read_csv(matrix, index_col = 0, error_bad_lines=False)
 
-# convert to data frames
-pairs = pd.DataFrame(df1)
-updated_matrix = pd.DataFrame(df2)
+# convert to data frame
+updated_matrix = pd.DataFrame(df1)
 
 # count the types of categories
-val_counts = df2.apply(pd.value_counts)
+val_counts = df1.apply(pd.value_counts)
 val_counts['Count of cats'] = val_counts.sum(axis=1)
 
 # convert and print to json for supplemental website S1

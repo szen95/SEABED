@@ -14,6 +14,7 @@ The scripts are named as they are used.
 3. Feature enrichment to nominate biomarkers
 
 4. Classification of pair-wise drug responses
+* `drug_pair_classification.R`
 
 5. Visualization of pair-wise drug responses
 * `heatmap.py` takes the matrix in `MAPK_AKT_drug-drug_matrix.csv` (this is found in `example_inputs`) and creates a heatmap that shows the distinct drug response types.

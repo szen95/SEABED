@@ -16,9 +16,8 @@ The scripts are named as they are used.
 4. Classification of pair-wise drug responses
 
 5. Visualization of pair-wise drug responses
-* `heatmap.py` takes the matrix in `MAPK_AKT_drug-drug_matrix.csv` and creates a heatmap that shows the distinct drug response types.
-*  The relevant files to generate the supplemental website are `index.html`, `heatmap.css`, `heatmap.js`, `labels.json`, `metrics_data.json`,
-`values.tsv`, and `img`.
+* `heatmap.py` takes the matrix in `MAPK_AKT_drug-drug_matrix.csv` (this is found in `example_inputs`) and creates a heatmap that shows the distinct drug response types.
+*  The relevant files to generate the supplemental website are `index.html` and in the folder `website_s1`.
 * The SEABED supplemental website can be found [here](https://szen95.github.io/SEABED/).  
 
 6. 2-D visualization of drug response profiles

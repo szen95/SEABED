@@ -229,7 +229,7 @@ function heatmap_display(url, heatmapId, paletteName) {
 
                 console.log(final_cols);
 
-                var image_file = "img/POET_Visualisation_" + final_rows + "_" + final_cols + ".pdf";
+                var image_file = "website_s1/img/POET_Visualisation_" + final_rows + "_" + final_cols + ".pdf";
                 openIMG(image_file);
                 
             });
@@ -308,7 +308,7 @@ function heatmap_display(url, heatmapId, paletteName) {
 
         var fig_legend = svg.append("svg:image")
             .attr("class", "fig_legend")
-            .attr("xlink:href", "img/figure3_legend.png")
+            .attr("xlink:href", "website_s1/img/figure3_legend.png")
             .attr("x", legendElementWidth * 4)
             .attr("y", legendPosTop / 15)
             .attr("width", "40%")

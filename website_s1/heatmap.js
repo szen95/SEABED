@@ -248,15 +248,6 @@ function heatmap_display(url, heatmapId, paletteName) {
             //   });
             
         }
-
-        var logo = svg.append("g")
-            .attr("class", "logo")
-            .attr("transform", "translate(0,-370)")
-            .selectAll(".legendElement")
-            .data(legendElementText)
-            .enter().append("g")
-            .attr("class", "legendElement");
-        
         
         var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
         { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },

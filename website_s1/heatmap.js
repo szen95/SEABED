@@ -254,6 +254,7 @@ function heatmap_display(url, heatmapId, paletteName) {
             .attr("xlink:href", "website_s1/img/SEABED_logo.png")
             .attr("x", legendElementWidth)
             .attr("y", legendPosTop)
+            .attr("transform", "translate(0,20)")
             .attr("width", "20%")
             .attr("height", "20%");
 

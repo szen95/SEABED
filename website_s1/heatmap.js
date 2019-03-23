@@ -248,6 +248,14 @@ function heatmap_display(url, heatmapId, paletteName) {
             //   });
             
         }
+
+        var logo = svg.append("svg:image")
+            .attr("class", "logo")
+            .attr("xlink:href", "website_s1/img/SEABED_logo.png")
+            .attr("x", legendElementWidth * 4)
+            .attr("y", legendPosTop / 15)
+            .attr("width", "40%")
+            .attr("height", "40%");
         
         var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
         { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },

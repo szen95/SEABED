@@ -183,44 +183,44 @@ function heatmap_display(url, heatmapId, paletteName) {
                 d3.select('#colLabel_' + i).classed("hover", true);
                 d3.select('#rowLabel_' + j).classed("hover", true);
 
-                
+
 
                 var data_cell = d;
-                
-                if (data_cell == -1) { 
+
+                if (data_cell == -1) {
                     tooltip.html('<div class="heatmap_tooltip">' + 'No plot' + '</div>');
                     tooltip.style("visibility", "visible");
-                    
-                // } else if (data_cell == 0) {
-                //     tooltip.html('<div class="heatmap_tooltip">' + 'Check for plot' + '</div>');
-                //     tooltip.style("visibility", "visible");
-                // } else {
+
+                    // } else if (data_cell == 0) {
+                    //     tooltip.html('<div class="heatmap_tooltip">' + 'Check for plot' + '</div>');
+                    //     tooltip.style("visibility", "visible");
+                    // } else {
                 } else {
                     tooltip.html('<div class="heatmap_tooltip">' + 'Plot available' + '</div>');
                     tooltip.style("visibility", "visible");
-                } 
+                }
 
-                    
+
             })
             .on('mouseout', function (d, i, j) {
                 d3.select('#colLabel_' + i).classed("hover", false);
                 d3.select('#rowLabel_' + j).classed("hover", false);
-                
+
                 tooltip.style("visibility", "hidden");
 
             })
             .on("mousemove", function (d, i) {
                 tooltip.style("top", (d3.event.pageY - 55) + "px").style("left", (d3.event.pageX - 60) + "px");
-                
+
             })
             .on('click', function (d, i, j) {
-                
+
                 d3.select('#colLabel_' + i);
                 d3.select('#rowLabel_' + j);
 
                 var cols = labels.columns[i];
                 var rows = labels.index[j];
-                
+
                 rows = rows.replace(/ *\([^)]*\) */g, "");
                 cols = cols.replace(/ *\([^)]*\) */g, "");
 
@@ -231,7 +231,7 @@ function heatmap_display(url, heatmapId, paletteName) {
 
                 var image_file = "website_s1/img/POET_Visualisation_" + final_rows + "_" + final_cols + ".pdf";
                 openIMG(image_file);
-                
+
             });
 
         function openIMG(d) {
@@ -240,21 +240,14 @@ function heatmap_display(url, heatmapId, paletteName) {
             // console.log(d);
             // $("#modal01").show();
             // $("#box").show();
-            
+
 
             // $("#box").click(function (e) {
             //     $("#modal01").hide();
             //     $("#box").hide();
             //   });
-            
-        }
-        
-        var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
-        { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },
-        { "label": "Preferential MAPK pathway sensitivity (iii)", "value": 2 },
-        { "label": "Preferential PI3K-AKT pathway sensitivity (iv)", "value": 3 },
-        { "label": "Sensitive to either a MAPK pathway inhibitor or PI3K-AKT pathway inhibitor and vice versa (Divergent response, v)", "value": 4 }];
 
+        }
 
         var logo = svg.append("svg:image")
             .attr("class", "logo")
@@ -263,6 +256,12 @@ function heatmap_display(url, heatmapId, paletteName) {
             .attr("y", legendPosTop / 15)
             .attr("width", "20%")
             .attr("height", "20%");
+
+        var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
+        { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },
+        { "label": "Preferential MAPK pathway sensitivity (iii)", "value": 2 },
+        { "label": "Preferential PI3K-AKT pathway sensitivity (iv)", "value": 3 },
+        { "label": "Sensitive to either a MAPK pathway inhibitor or PI3K-AKT pathway inhibitor and vice versa (Divergent response, v)", "value": 4 }];
 
         var legend = svg.append("g")
             .attr("class", "legend")
@@ -296,7 +295,7 @@ function heatmap_display(url, heatmapId, paletteName) {
             })
             .attr("y", legendPosTop + cellSize)
             .call(wrap, 90);
-        
+
         var akt_drug = svg.append("text")
             .attr("class", "drug_class")
             .text("AKT/PI3K inhibitors")
@@ -307,7 +306,7 @@ function heatmap_display(url, heatmapId, paletteName) {
             .attr("transform", function (d, i) {
                 return "translate(" + cellSize / 2 + ", -3) rotate(-90) rotate(45, 0, " + (i * cellSize) + ")";
             })
-        
+
         var mapk_drug = svg.append("text")
             .attr("class", "drug_class")
             .text("MAPK inhibitors")
@@ -321,14 +320,14 @@ function heatmap_display(url, heatmapId, paletteName) {
             .attr("y", legendPosTop / 15)
             .attr("width", "40%")
             .attr("height", "40%");
-        
+
         var fig_legend_texg = svg.append("text")
             .attr("class", "drug_class")
             .text("Legend")
             .attr("x", legendElementWidth * 5)
             .attr("y", legendPosTop / 10)
 
-        
+
         function wrap(text, width) {
             text.each(function () {
                 var text = d3.select(this),
@@ -365,7 +364,7 @@ function heatmap_display(url, heatmapId, paletteName) {
                     if (d != null) values.push(d);
                     else values.push(-999); // to handle NaN
                 });
-            	
+
             if (rORc == "r") { // sort on cols
                 sorted = d3.range(col_number).sort(function (a, b) {
                     if (sortOrder) {

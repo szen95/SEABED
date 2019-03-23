@@ -275,14 +275,7 @@ function heatmap_display(url, heatmapId, paletteName) {
         { "label": "Preferential PI3K-AKT pathway sensitivity (iv)", "value": 3 },
         { "label": "Sensitive to either a MAPK pathway inhibitor or PI3K-AKT pathway inhibitor and vice versa (Divergent response, v)", "value": 4 }];
 
-        var fig_legend = svg.append("svg:image")
-            .attr("class", "logo")
-            .attr("xlink:href", "website_s1/img/SEABED_logo.png")
-            .attr("x", legendElementWidth * 4)
-            .attr("y", legendPosTop / 15)
-            .attr("width", "40%")
-            .attr("height", "40%");
-
+        
         legend.append("text")
             .attr("class", "mono legendElement")
             .text(function (d) {

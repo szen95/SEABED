@@ -1,6 +1,8 @@
 # SEABED
 The repository for the SEABED project. SEABED stands for SEgmentation And Biomarker Enrichment for defining Differential drug response.
 
+![logo](https://raw.githubusercontent.com/szen95/SEABED/master/SEABED_logo.png)
+
 ### Workflow
 
 This file covers the steps to get from the public data files (Table S2) to the segmented subpopulations and the relevant biomarkers generated (Table S3) by SEABED.

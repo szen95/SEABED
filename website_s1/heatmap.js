@@ -261,9 +261,9 @@ function heatmap_display(url, heatmapId, paletteName) {
             .attr("xlink:href", "website_s1/img/SEABED_logo.png")
             .attr("x", legendElementWidth * 4)
             .attr("y", legendPosTop / 15)
-            .attr("width", "40%")
-            .attr("height", "40%");
-            
+            .attr("width", "20%")
+            .attr("height", "20%");
+
         var legend = svg.append("g")
             .attr("class", "legend")
             .attr("transform", "translate(0,-370)")

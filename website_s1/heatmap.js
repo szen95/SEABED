@@ -257,6 +257,23 @@ function heatmap_display(url, heatmapId, paletteName) {
             .enter().append("g")
             .attr("class", "legendElement");
         
+        
+        var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
+        { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },
+        { "label": "Preferential MAPK pathway sensitivity (iii)", "value": 2 },
+        { "label": "Preferential PI3K-AKT pathway sensitivity (iv)", "value": 3 },
+        { "label": "Sensitive to either a MAPK pathway inhibitor or PI3K-AKT pathway inhibitor and vice versa (Divergent response, v)", "value": 4 }];
+
+
+        var legend = svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", "translate(0,-370)")
+            .selectAll(".legendElement")
+            .data(legendElementText)
+            .enter().append("g")
+            .attr("class", "legendElement");
+
+
         legend.append("svg:rect")
             .attr("x", function (d, i) {
                 return legendElementWidth * i;
@@ -268,14 +285,8 @@ function heatmap_display(url, heatmapId, paletteName) {
             .style("fill", function (d, i) {
                 return colors[i];
             });
-        
-        var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
-        { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },
-        { "label": "Preferential MAPK pathway sensitivity (iii)", "value": 2 },
-        { "label": "Preferential PI3K-AKT pathway sensitivity (iv)", "value": 3 },
-        { "label": "Sensitive to either a MAPK pathway inhibitor or PI3K-AKT pathway inhibitor and vice versa (Divergent response, v)", "value": 4 }];
 
-        
+
         legend.append("text")
             .attr("class", "mono legendElement")
             .text(function (d) {

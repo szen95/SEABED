@@ -3,6 +3,13 @@
   font-family: monospace;
   touch-action: none;
 }
+
+.logo {
+  width: 20%;
+  height: 20%;
+  padding-left: 5%;
+}
+
 rect.bordered {
   stroke: #E6E6E6;
   stroke-width:2px;   

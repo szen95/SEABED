@@ -1,5 +1,5 @@
 # SEABED
-The repository for the SEABED project. SEABED stands for SEgmentation And Biomarker Enrichment for defining Differential drug response.
+The repository for the SEABED project. SEABED stands for SEgmentation And Biomarker Enrichment of Differential treatment response.
 
 ![logo](https://github.com/szen95/SEABED/blob/master/website_s1/img/SEABED_logo.png)
 
@@ -12,8 +12,10 @@ The scripts are named as they are used.
 1. Get the data (from GDSC, CCLE, CTRP) via Table S2
 
 2. Segmentation code
+* `PoetSegmentationCode`
 
 3. Feature enrichment to nominate biomarkers
+* `nominate_biomarker.R`
 
 4. Classification of pair-wise drug responses
 * `drug_pair_classification.R`

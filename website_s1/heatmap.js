@@ -37,7 +37,7 @@ function heatmap_display(url, heatmapId, paletteName) {
 
     var legendElementWidth = cellSize * 4;
 
-    var colors = ['#444444', '#f96881', '#fdff26', '#7fbf7f', '#0066ff'];
+    var colors = ['#A8A8A8', '#f96881', '#fdff26', '#7fbf7f', '#0066ff'];
 
 
     // http://bl.ocks.org/mbostock/3680999

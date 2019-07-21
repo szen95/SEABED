@@ -257,11 +257,11 @@ function heatmap_display(url, heatmapId, paletteName) {
         //     .attr("width", "20%")
         //     .attr("height", "20%");
 
-        var legendElementText = [{ "label": "No differential response (i)", "value": 0 },
-        { "label": "Sensitive to both MAPK and PI3K-AKT pathway inhibitors (ii)", "value": 1 },
-        { "label": "Preferential MAPK pathway sensitivity (iii)", "value": 2 },
-        { "label": "Preferential PI3K-AKT pathway sensitivity (iv)", "value": 3 },
-        { "label": "Sensitive to either a MAPK pathway inhibitor or PI3K-AKT pathway inhibitor and vice versa (Divergent response, v)", "value": 4 }];
+        var legendElementText = [{ "label": "No preferential response (i)", "value": 0 },
+        { "label": "Sensitive to both inhibitors (ii)", "value": 1 },
+        { "label": "Greater MAPK pathway sensitivity (iii)", "value": 2 },
+        { "label": "Greater PI3K-AKT pathway sensitivity (iv)", "value": 3 },
+        { "label": "Sensitive to either inhibitor but not both (Divergent response, v)", "value": 4 }];
 
         var legend = svg.append("g")
             .attr("class", "legend")

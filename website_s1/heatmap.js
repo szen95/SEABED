@@ -198,6 +198,8 @@ function heatmap_display(url, heatmapId, paletteName) {
                 tooltip.style("visibility", "visible");
                 }
 
+                console.log('#colLabel_' + i)
+                console.log('#rowLabel_' + j)
 
             })
             .on('mouseout', function (d, i, j) {

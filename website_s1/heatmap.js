@@ -185,18 +185,18 @@ function heatmap_display(url, heatmapId, paletteName) {
 
                 var data_cell = d;
 
-                // if (data_cell == -1) {
-                //     tooltip.html('<div class="heatmap_tooltip">' + 'No plot' + '</div>');
-                //     tooltip.style("visibility", "visible");
+                if (data_cell == -1) {
+                    tooltip.html('<div class="heatmap_tooltip">' + 'No plot' + '</div>');
+                    tooltip.style("visibility", "visible");
 
-                // } else if (data_cell == 0) {
-                //     tooltip.html('<div class="heatmap_tooltip">' + 'Check for plot' + '</div>');
-                //     tooltip.style("visibility", "visible");
+                } else if (data_cell == 0) {
+                    tooltip.html('<div class="heatmap_tooltip">' + 'Check for plot' + '</div>');
+                    tooltip.style("visibility", "visible");
                    
-                // } else {
+                } else {
                 tooltip.html('<div class="heatmap_tooltip">' + 'Plot available' + '</div>');
                 tooltip.style("visibility", "visible");
-                // }
+                }
 
 
             })

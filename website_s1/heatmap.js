@@ -227,7 +227,7 @@ function heatmap_display(url, heatmapId, paletteName) {
                 final_rows = rows.replace(/\(|\)/g, "");
                 final_cols = cols.replace(/\(|\)/g, "");
 
-                console.log(final.rows);
+                console.log(final_rows);
                 console.log(final_cols);
 
                 var image_file = "website_s1/img/POET_Visualisation_" + final_rows + "_" + final_cols + ".pdf";

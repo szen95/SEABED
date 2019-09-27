@@ -198,8 +198,17 @@ function heatmap_display(url, heatmapId, paletteName) {
                 tooltip.style("visibility", "visible");
                 }
 
-                console.log('#colLabel_' + i)
-                console.log('#rowLabel_' + j)
+                var cols = labels.columns[i];
+                var rows = labels.index[j];
+
+                rows = rows.replace(/ *\([^)]*\) */g, "");
+                cols = cols.replace(/ *\([^)]*\) */g, "");
+
+                final_rows = rows.replace(/\(|\)/g, "");
+                final_cols = cols.replace(/\(|\)/g, "");
+
+                console.log(final_rows)
+                console.log(final_cols)
 
             })
             .on('mouseout', function (d, i, j) {

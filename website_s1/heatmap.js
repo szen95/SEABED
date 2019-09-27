@@ -35,7 +35,7 @@ function heatmap_display(url, heatmapId, paletteName) {
     var legendPosTop = 80;
     var viewerPosLeft = 350;
 
-    var legendElementWidth = cellSize * 4;
+    var legendElementWidth = cellSize * 3;
 
     var colors = ['#A8A8A8', '#f96881', '#fdff26', '#7fbf7f', '#0066ff'];
 

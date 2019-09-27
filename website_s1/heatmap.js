@@ -35,7 +35,7 @@ function heatmap_display(url, heatmapId, paletteName) {
     var legendPosTop = 80;
     var viewerPosLeft = 350;
 
-    var legendElementWidth = cellSize * 3;
+    var legendElementWidth = cellSize * 4;
 
     var colors = ['#A8A8A8', '#f96881', '#fdff26', '#7fbf7f', '#0066ff'];
 
@@ -319,7 +319,7 @@ function heatmap_display(url, heatmapId, paletteName) {
         var fig_legend = svg.append("svg:image")
             .attr("class", "fig_legend")
             .attr("xlink:href", "website_s1/img/figure3_legend.png")
-            .attr("x", legendElementWidth * 4)
+            .attr("x", legendElementWidth * 2)
             .attr("y", legendPosTop / 15)
             .attr("width", "40%")
             .attr("height", "40%");

@@ -5,11 +5,11 @@ The repository for the SEABED project. SEABED stands for SEgmentation And Biomar
 
 ### Workflow
 
-This file covers the steps to get from the public data files (Table S2) to the segmented subpopulations and the relevant biomarkers generated (Table S3) by SEABED.
+This file covers the steps to get from the public data (Supplementary Table S4) to the segmented subpopulations and the relevant biomarkers generated (Supplementary Table S5) by SEABED.
 
 The scripts are named as they are used.
 
-1. Get the data (from GDSC, CCLE, CTRP) via Table S2
+1. Input data is available from Supplementary Table S4
 
 2. Segmentation code
 * `PoetSegmentationCode`
@@ -22,8 +22,9 @@ The scripts are named as they are used.
 
 5. Visualization of pair-wise drug responses
 * `heatmap.py` takes the matrix in `MAPK_AKT_drug-drug_matrix.csv` (this is found in `example_inputs`) and creates a heatmap that shows the distinct drug response types.
-*  The relevant files to generate the supplemental website are `index.html` and in the folder `website_s1`.
-* The SEABED supplemental website can be found [here](https://szen95.github.io/SEABED/).  
+*  The relevant files to generate the supplementary website are `index.html` and in the folder `website_s1`.
+* The SEABED supplementary website can be found [here](https://szen95.github.io/SEABED/).  
+* The supplementary website is based on information to generate interactive heatmaps, available [here](https://gist.github.com/PBrockmann/635179ff33f17d2d75c2). 
 
 6. 2-D visualization of drug response profiles
 * `scatter_plot.py` takes the output data after segmentation and creates a scatter plot showing the differential drug response of the subpopulations.

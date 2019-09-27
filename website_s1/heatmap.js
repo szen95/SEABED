@@ -194,9 +194,9 @@ function heatmap_display(url, heatmapId, paletteName) {
                 //     tooltip.style("visibility", "visible");
                    
                 // } else {
-                    tooltip.html('<div class="heatmap_tooltip">' + 'Plot available' + '</div>');
-                    tooltip.style("visibility", "visible");
-                }
+                tooltip.html('<div class="heatmap_tooltip">' + 'Plot available' + '</div>');
+                tooltip.style("visibility", "visible");
+                // }
 
 
             })

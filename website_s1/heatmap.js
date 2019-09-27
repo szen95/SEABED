@@ -1,4 +1,4 @@
-var classesNumber = 6,
+var classesNumber = 5,
     cellSize = 24;
 
 //#########################################################

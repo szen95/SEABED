@@ -319,7 +319,7 @@ function heatmap_display(url, heatmapId, paletteName) {
         var fig_legend = svg.append("svg:image")
             .attr("class", "fig_legend")
             .attr("xlink:href", "website_s1/img/figure3_legend.png")
-            .attr("x", legendElementWidth * 5.5)
+            .attr("x", legendElementWidth * 4.8)
             .attr("y", legendPosTop / 15)
             .attr("width", "40%")
             .attr("height", "40%");

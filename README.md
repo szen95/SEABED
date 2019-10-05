@@ -1,6 +1,8 @@
 # SEABED
 The repository for the SEABED project. SEABED stands for SEgmentation And Biomarker Enrichment of Differential treatment response.
 
+Our manuscript, titled "Defining subpopulations of differential drug response to reveal novel target populations", describes our work and is now available at npj Systems Biology and Applications. It is available [here](https://www.nature.com/articles/s41540-019-0113-4). 
+
 ![logo](https://github.com/szen95/SEABED/blob/master/website_s1/img/SEABED_logo.png)
 
 ### Workflow
@@ -24,7 +26,7 @@ The scripts are named as they are used.
 * `heatmap.py` takes the matrix in `MAPK_AKT_drug-drug_matrix.csv` (this is found in `example_inputs`) and creates a heatmap that shows the distinct drug response types.
 *  The relevant files to generate the supplementary website are `index.html` and in the folder `website_s1`.
 * The SEABED supplementary website can be found [here](https://szen95.github.io/SEABED/).  
-* The supplementary website is based on information and code to generate interactive heatmaps, available [here](https://gist.github.com/PBrockmann/635179ff33f17d2d75c2). 
+* This is based from information and code available from https://github.com/PBrockmann/heatmap. Last accessed October 4, 2019. 
 
 6. 2-D visualization of drug response profiles
 * `scatter_plot.py` takes the output data after segmentation and creates a scatter plot showing the differential drug response of the subpopulations.

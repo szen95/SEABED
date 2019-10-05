@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <html>
+<!--
+ ##########################################################################
+ Adapted for the SEABED website from https://github.com/PBrockmann/heatmap
+ Patrick.Brockmann@lsce.ipsl.fr
+ ##########################################################################
+-->
 
 <script src="https://d3js.org/d3.v3.js"></script>
 <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
@@ -18,7 +24,7 @@
 
 <script>
 $(document).ready(function() {
-	heatmap_display("website_s1/metrics_data.json", "#heatmap", "Spectral");
+	heatmap_display("website_s1/drug_data.json", "#heatmap", "Spectral");
 });
 
 </script>
@@ -28,6 +34,12 @@ $(document).ready(function() {
 <body>
 
 <img id="logo" src="website_s1/img/SEABED_logo.png"/>
+
+<p class="intro">More information can be found in our publication, available at <a target="_blank" href="https://www.nature.com/articles/s41540-019-0113-4">npj Systems Biology and Application.</a></p>
+
+<h4 class="intro">References</h4>
+<p class="intro">Adapted from, <a target="_blank" href="https://github.com/PBrockmann/heatmap">https://github.com/PBrockmann/heatmap</a>. Last accessed October 4, 2019.</p>
+
 
 <div id="heatmap"></div>
 

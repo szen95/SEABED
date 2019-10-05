@@ -3,6 +3,11 @@
   font-family: monospace;
   touch-action: none;
 }
+.intro {
+  font-family: monospace;
+  font-size: 10pt;
+  color: #000;
+}
 
 .logo {
   width: 20%;
@@ -131,7 +136,5 @@ text.drug_class {
   position: absolute;
   z-index: 10;
 }
-
-
 
 

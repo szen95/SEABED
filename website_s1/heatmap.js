@@ -4,6 +4,10 @@ var classesNumber = 5,
 //#########################################################
 function heatmap_display(url, heatmapId, paletteName) {
 
+     //##########################################################################
+    // Patrick.Brockmann@lsce.ipsl.fr
+    //##########################################################################
+    
     //==================================================
     // References
     // http://bl.ocks.org/Soylent/bbff6cc507dca2f48792
@@ -45,7 +49,6 @@ function heatmap_display(url, heatmapId, paletteName) {
 
     //==================================================
     d3.json(url, function (error, data) {
-
 
         var arr = data.data;
         var row_number = arr.length;
@@ -185,20 +188,6 @@ function heatmap_display(url, heatmapId, paletteName) {
 
                 var data_cell = d;
 
-                // if (data_cell == -1) {
-                //     tooltip.html('<div class="heatmap_tooltip">' + 'No plot' + '</div>');
-                //     tooltip.style("visibility", "visible");
-
-                // } else 
-                if (data_cell == 0) {
-                    tooltip.html('<div class="heatmap_tooltip">' + 'Check for plot' + '</div>');
-                    tooltip.style("visibility", "visible");
-                   
-                } else {
-                    tooltip.html('<div class="heatmap_tooltip">' + 'Plot available' + '</div>');
-                    tooltip.style("visibility", "visible");
-                }
-
                 var cols = labels.columns[i];
                 var rows = labels.index[j];
 
@@ -211,6 +200,17 @@ function heatmap_display(url, heatmapId, paletteName) {
                 console.log(final_rows)
                 console.log(final_cols)
 
+                if (data_cell == 0) {
+                    tooltip.html('<div class="heatmap_tooltip">' + 'Click for plot' + '</div>');
+                    tooltip.style("visibility", "visible");
+                   
+                } else {
+                    tooltip.html('<div class="heatmap_tooltip">' + 'Click for plot' +  '</div>');
+                    tooltip.style("visibility", "visible");
+                }
+
+                
+
             })
             .on('mouseout', function (d, i, j) {
                 d3.select('#colLabel_' + i).classed("hover", false);
@@ -221,6 +221,7 @@ function heatmap_display(url, heatmapId, paletteName) {
             })
             .on("mousemove", function (d, i) {
                 tooltip.style("top", (d3.event.pageY - 55) + "px").style("left", (d3.event.pageX - 60) + "px");
+                // tooltip.style("visibility", "hidden");
 
             })
             .on('click', function (d, i, j) {
@@ -247,16 +248,6 @@ function heatmap_display(url, heatmapId, paletteName) {
 
         function openIMG(d) {
             window.open(d);
-            // document.getElementById('box').src = d;
-            // console.log(d);
-            // $("#modal01").show();
-            // $("#box").show();
-
-
-            // $("#box").click(function (e) {
-            //     $("#modal01").hide();
-            //     $("#box").hide();
-            //   });
 
         }
 
@@ -488,23 +479,4 @@ function changeOrder(newOrder, heatmapId) {
                 return "translate(-3," + cellSize / 1.5 + ")";
             });
     }
-}
-
-//#########################################################
-function changePalette(paletteName, heatmapId) {
-    var colors = colorbrewer[paletteName][classesNumber];
-    var colorScale = d3.scale.quantize()
-        .domain([0.0, 1.0])
-        .range(colors);
-    var svg = d3.select(heatmapId);
-    var t = svg.transition().duration(500);
-    t.selectAll(".cell")
-        .style("fill", function (d) {
-            if (d != null) return colorScale(d);
-            else return "url(#diagonalHatch)";
-        })
-    t.selectAll(".cellLegend")
-        .style("fill", function (d, i) {
-            return colors[i];
-        });
 }

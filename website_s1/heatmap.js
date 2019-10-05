@@ -4,7 +4,8 @@ var classesNumber = 5,
 //#########################################################
 function heatmap_display(url, heatmapId, paletteName) {
 
-     //##########################################################################
+    //##########################################################################
+    // Adapted for the SEABED website from https://github.com/PBrockmann/heatmap
     // Patrick.Brockmann@lsce.ipsl.fr
     //##########################################################################
     

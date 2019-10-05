@@ -1,7 +1,7 @@
 # SEABED
 The repository for the SEABED project. SEABED stands for SEgmentation And Biomarker Enrichment of Differential treatment response.
 
-Our manuscript, titled "Defining subpopulations of differential drug response to reveal novel target populations", describes our work and is now available at npj Systems Biology and Applications. It is available [here](https://www.nature.com/articles/s41540-019-0113-4). 
+Our manuscript, titled "Defining subpopulations of differential drug response to reveal novel target populations", describes our work and is now available at [npj Systems Biology and Applications](https://www.nature.com/articles/s41540-019-0113-4). 
 
 ![logo](https://github.com/szen95/SEABED/blob/master/website_s1/img/SEABED_logo.png)
 
